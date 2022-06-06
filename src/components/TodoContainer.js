@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Header from './Header';
 import InputTodo from './InputTodos';
 import TodosList from './TodoList';
 
-export class TodoContainer extends React.Component {
+export class TodoContainer extends Component {
   constructor() {
     super();
     this.state = {
@@ -16,12 +16,12 @@ export class TodoContainer extends React.Component {
         },
         {
           id: uuidv4(),
-          title: 'Start building the react to do list',
+          title: 'Start building react to do list',
           completed: false,
         },
         {
           id: uuidv4(),
-          title: 'Take a break for 1 hour',
+          title: 'Take a break',
           completed: false,
         },
       ],
@@ -41,6 +41,16 @@ export class TodoContainer extends React.Component {
         return todo;
       }),
     }));
+  };
+
+  // Delete button
+  delTodo = (id) => {
+    const { todos } = this.state;
+    this.setState({
+      todos: [
+        ...todos.filter((todo) => todo.id !== id),
+      ],
+    });
   };
 
   // Add item
@@ -73,12 +83,13 @@ export class TodoContainer extends React.Component {
     const { todos } = this.state;
     return (
       <div className="Container">
-        <div className="card">
+        <div className="containerTodo">
           <Header />
           <InputTodo addTodoProps={this.addTodoItem} />
           <TodosList
             todos={todos}
             handleChangeProps={this.handleChange}
+            deleteTodoProps={this.delTodo}
             setUpdate={this.setUpdate}
           />
         </div>

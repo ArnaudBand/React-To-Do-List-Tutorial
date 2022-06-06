@@ -23,6 +23,7 @@ export class TodoItem extends React.PureComponent {
 
   render() {
     const completedStyle = {
+      fontStyle: 'italic',
       color: '#595959',
       opacity: 0.4,
       textDecoration: 'line-through',
@@ -41,7 +42,7 @@ export class TodoItem extends React.PureComponent {
       editMode.display = 'none';
     }
 
-    const { handleChangeProps, setUpdate } = this.props;
+    const { handleChangeProps, deleteTodoProps, setUpdate } = this.props;
     return (
       <div className="items">
         <div onDoubleClick={this.handleEditing} style={viewMode}>
@@ -62,7 +63,7 @@ export class TodoItem extends React.PureComponent {
           }}
           onKeyDown={this.handleUpdatedDone}
         />
-        <button type="button">
+        <button type="button" onClick={() => deleteTodoProps(todo.id)}>
             Delete
         </button>
       </div>
@@ -72,7 +73,9 @@ export class TodoItem extends React.PureComponent {
 
 TodoItem.propTypes = {
   handleChangeProps: PropTypes.func.isRequired,
+  deleteTodoProps: PropTypes.func.isRequired,
   setUpdate: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   todo: PropTypes.object.isRequired,
 };
 

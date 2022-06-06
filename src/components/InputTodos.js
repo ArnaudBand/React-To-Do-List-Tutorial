@@ -24,8 +24,10 @@ class InputTodo extends React.PureComponent {
       this.setState({
         title: '',
       });
+    } else {
+        alert('Please write an item');
+        return false;
     }
-    return false;
   };
 
   render() {
@@ -40,7 +42,7 @@ class InputTodo extends React.PureComponent {
           value={title}
           onChange={this.onChange}
         />
-        <button type="submit" className="input-submit">
+        <button type="submit" className="btn-submit">
           Add
         </button>
       </form>
