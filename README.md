@@ -10,6 +10,7 @@ React Tutorial From Scratch: A Step-by-Step Guide (2021), where you will develop
 
 ### Live Demo
 
+(live demo)[https://arnaudband.github.io/React-To-Do-List-Tutorial/]
 
 ## Set-up GitHub Actions
 
