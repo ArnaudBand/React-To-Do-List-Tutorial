@@ -4,7 +4,48 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.containerTodo {
+  border: 1px solid #009;
+}
+
+.form-container {
+  padding: 10px 0;
+  border-bottom: 1px solid #008;
+}
+
+.input-text {
+  width: 90%;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+}
+
+.btn-submit {
+  border: none;
+  font-size: 15px;
+}
+
 .items {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  padding: 10px;
+}
+
+.spanInput {
+  padding: 0 20px;
+}
+
+.delete-btn {
+  margin-left: 20px;
+  border: none;
+  background: transparent;
 }

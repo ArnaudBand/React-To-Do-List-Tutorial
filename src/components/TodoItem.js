@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaTrash } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 class TodoItem extends React.PureComponent {
@@ -23,9 +24,7 @@ class TodoItem extends React.PureComponent {
 
   render() {
     const completedStyle = {
-      fontStyle: 'italic',
       color: '#595959',
-      opacity: 0.4,
       textDecoration: 'line-through',
     };
 
@@ -50,8 +49,9 @@ class TodoItem extends React.PureComponent {
             type="checkbox"
             checked={completed}
             onChange={() => handleChangeProps(id)}
+            className="checkInput"
           />
-          <span style={completed ? completedStyle : null}>{title}</span>
+          <span className="spanInput" style={completed ? completedStyle : null}>{title}</span>
         </div>
         <input
           type="text"
@@ -63,8 +63,8 @@ class TodoItem extends React.PureComponent {
           }}
           onKeyDown={this.handleUpdatedDone}
         />
-        <button type="button" onClick={() => deleteTodoProps(todo.id)}>
-          Delete
+        <button type="button" className="delete-btn" onClick={() => deleteTodoProps(todo.id)}>
+          <FaTrash />
         </button>
       </div>
     );

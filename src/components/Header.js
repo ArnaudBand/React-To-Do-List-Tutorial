@@ -2,19 +2,19 @@ import React from 'react';
 
 const Header = () => {
   const headerStyle = {
-    padding: '20px 0',
+    padding: '10px 0',
     lineHeight: '1.5em',
+    border: '1px solid #000',
   };
 
   return (
     <header style={headerStyle}>
       <h1
         style={{
-          fontSize: '6rem',
+          fontSize: '2em',
           fontWeight: '600',
-          marginBottom: '2rem',
           lineHeight: '1em',
-          color: '#ececec',
+          color: '#eec',
           textTransform: 'lowercase',
           textAlign: 'center',
         }}
