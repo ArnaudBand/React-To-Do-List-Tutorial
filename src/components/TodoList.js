@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// eslint-disable-next-line import/no-named-as-default
 import TodoItem from './TodoItem';
 
 export class TodosList extends React.PureComponent {
@@ -27,6 +28,7 @@ TodosList.propTypes = {
   handleChangeProps: PropTypes.func.isRequired,
   deleteTodoProps: PropTypes.func.isRequired,
   setUpdate: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   todos: PropTypes.array.isRequired,
 };
 export default TodosList;

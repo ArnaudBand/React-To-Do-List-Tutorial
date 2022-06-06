@@ -1,4 +1,6 @@
+/* eslint-disable import/no-named-as-default */
 import React, { Component } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { v4 as uuidv4 } from 'uuid';
 import Header from './Header';
 import InputTodo from './InputTodos';

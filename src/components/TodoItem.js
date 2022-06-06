@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export class TodoItem extends React.PureComponent {
+class TodoItem extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,7 +64,7 @@ export class TodoItem extends React.PureComponent {
           onKeyDown={this.handleUpdatedDone}
         />
         <button type="button" onClick={() => deleteTodoProps(todo.id)}>
-            Delete
+          Delete
         </button>
       </div>
     );

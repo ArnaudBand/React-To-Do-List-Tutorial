@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 
 class InputTodo extends React.PureComponent {
@@ -15,6 +16,7 @@ class InputTodo extends React.PureComponent {
     });
   };
 
+  // eslint-disable-next-line consistent-return
   onSubmit = (e) => {
     e.preventDefault();
     const { title } = this.state;
@@ -25,8 +27,8 @@ class InputTodo extends React.PureComponent {
         title: '',
       });
     } else {
-        alert('Please write an item');
-        return false;
+      alert('Please write an item');
+      return false;
     }
   };
 
