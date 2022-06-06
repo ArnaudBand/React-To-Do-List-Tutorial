@@ -1,6 +1,15 @@
-# React and Redux
+# React Todo list Tutorial
 
-If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).
+React Tutorial From Scratch: A Step-by-Step Guide (2021), where you will develop a To do app!
+
+## Built with: 
+
+- CSS
+- JavaScript
+- Framework (React.js)
+
+### Live Demo
+
 
 ## Set-up GitHub Actions
 
@@ -63,3 +72,31 @@ Click on the `Details` link to see the full output and the errors that need to b
 Feel free to add your own deployment actions which can run your tests and deploy to Heroku.
 
 Make sure that you do not modify the [`.github/workflows/linters.yml`](.github/workflows/linters.yml) but that you create a separe GitHub Action workflow file for that.
+
+## Authors
+
+👤 Arnaud Bandonkeye
+
+GitHub: (ArnaudBand)[https://github.com/ArnaudBand]
+Twitter: (@ba104781)[https://twitter.com/ba104781]
+LinkedIn: (Arnaud Bandonkeye)[https://www.linkedin.com/in/arnaud-bandonkeye-893a2b228/]
+
+
+## 🤝 Contributing
+
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the issues page.
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+Ibas Majid, author of React Tutorial From Scratch: A Step-by-Step Guide (2021).
+
+📝 License
+
+This project is MIT licensed.
