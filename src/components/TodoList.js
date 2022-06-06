@@ -1,34 +1,19 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import PropTypes from 'prop-types';
-// eslint-disable-next-line import/no-named-as-default
 import TodoItem from './TodoItem';
 
-export class TodosList extends React.PureComponent {
-  render() {
-    const {
-      todos, handleChangeProps, deleteTodoProps, setUpdate,
-    } = this.props;
-
-    return (
-      <ul>
-        {todos.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            handleChangeProps={handleChangeProps}
-            deleteTodoProps={deleteTodoProps}
-            setUpdate={setUpdate}
-          />
-        ))}
-      </ul>
-    );
-  }
-}
-TodosList.propTypes = {
-  handleChangeProps: PropTypes.func.isRequired,
-  deleteTodoProps: PropTypes.func.isRequired,
-  setUpdate: PropTypes.func.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  todos: PropTypes.array.isRequired,
-};
+const TodosList = (props) => (
+  <ul>
+    {props.todos.map((todo) => (
+      <TodoItem
+        key={todo.id}
+        todo={todo}
+        handleChangeProps={props.handleChangeProps}
+        deleteTodoProps={props.deleteTodoProps}
+        setUpdate={props.setUpdate}
+      />
+    ))}
+  </ul>
+);
 export default TodosList;

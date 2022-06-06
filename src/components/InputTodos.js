@@ -1,6 +1,5 @@
 import React from 'react';
 import { FiPlusCircle } from 'react-icons/fi';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 
 class InputTodo extends React.PureComponent {

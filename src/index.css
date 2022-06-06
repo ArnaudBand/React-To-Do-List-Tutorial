@@ -11,7 +11,7 @@ body {
   height: 100vh;
 }
 
-.containerTodo {
+.inner {
   border: 1px solid #009;
 }
 
