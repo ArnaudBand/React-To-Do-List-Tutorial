@@ -8,11 +8,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
+  width: 90%;
+}
+
+.headerStyle {
+  padding: 10px 0;
+  line-height: 1.5em;
+  border-bottom: 1px solid #000;
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1em;
+  color: #eec;
+  text-transform: lowercase;
+  text-align: center;
 }
 
 .inner {
-  border: 1px solid #009;
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 5px 3px 3px 4px rgb(63, 63, 63);
 }
 
 .form-container {
@@ -40,12 +58,16 @@ body {
   padding: 10px;
 }
 
+.items:last-child {
+  border-bottom: none;
+}
+
 .spanInput {
   padding: 0 20px;
 }
 
 .delete-btn {
-  margin-left: 20px;
+  padding: 0 25px;
   border: none;
   background: transparent;
 }
